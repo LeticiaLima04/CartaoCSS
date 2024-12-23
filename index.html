@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cartão CSS</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+            .body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #d4e3f8;
+                margin: 0;
+            }
+            .cartao3D {
+                perspective: 1000px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box_frente {
+                width: 300px;
+                height: 200px;
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 1s;
+            }
+            .box_frente:hover {
+                transform: rotateY(180deg);
+            }
+            .box {
+                height: 259px;
+                width: 500px;
+                padding: 50px;
+                border: 5px solid azure;
+                margin: 15px;
+                background: linear-gradient(135deg, #d6f4f7, #a1d8e6);
+                border-radius: 5mm;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                backface-visibility: hidden;
+            }
+            .box_costas {
+                height: 259px;
+                width: 350px;
+                padding: 50px;
+                border: 5px solid, azure;
+                margin: 15px;
+                background-color: #d6f4f7;
+                border-radius: 15px;
+                position: absolute;
+                transform: rotateY(180deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: left;
+                backface-visibility: hidden;
+            }
+            .box2 {
+                height: 259px;
+                width: 250px;
+                padding: 50px;
+                border: 5px solid, azure;
+                margin: 15px;
+                background-color: #8cbdc9;
+                border-radius: 5mm;
+                position: absolute;
+                z-index: 10;
+                transform: rotateY(180deg);
+                right: 165px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                backface-visibility: hidden;
+            }
+            .nome {
+                font-size: 41px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 1px 2px rgba(4, 80, 99, 0.541);
+                position: absolute;
+                top: 90px;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+            .profissao {
+                font-family: 'Times New Roman', serif, bold;
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 1px 2px rgba(4, 80, 99, 0.541);
+                font-size: 25px;
+                position: absolute;
+                top: 130px;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+            .aviao {
+                width: 400px;
+                height: 150px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .cont {
+                font-size: 41px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 1px 2px rgba(4, 80, 99, 0.541);
+                position: absolute;
+                top: 50px;
+                right: 5%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+                letter-spacing: 5px;
+            }
+            .cont_p1 {
+                font-size: 15px;
+                font-family: Georgia, 'Times New Roman', Times, serif, bold;
+                color: rgb(25, 57, 66);
+                text-shadow: 1px 1px 2px rgba(4, 80, 99, 0.541);
+                position: absolute;
+                top: 100px;
+                right: 0%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+            .cont_p2 {
+                font-size: 18px;
+                font-family: Georgia, 'Times New Roman', Times, serif, bold;
+                color: rgb(25, 57, 66);
+                text-shadow: 1px 1px 2px rgba(4, 80, 99, 0.541);
+                position: absolute;
+                top: 120px;
+                right: 2%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+            .img {
+                width: 170px;
+                height: 180px;
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 5px solid, azure;
+                border-radius: 15px;
+            }
+            .nuvens {
+                width: 235px;
+                height: 122px;
+                position: absolute;
+                top: 145px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .insta {
+                width: 80px;
+                height: 80px;
+                text-shadow: 1px 1px 2px rgba(4, 80, 99, 0.541);
+                position: absolute;
+                top: 150px;
+                right: 140%;
+                transform: translateX(-50%);
+            }
+            .git {
+                width: 120px;
+                height: 65px;
+                text-shadow: 1px 1px 2px rgba(4, 80, 99, 0.541);
+                position: absolute;
+                top: 157px;
+                right: 85%;
+                transform: translateX(-50%);
+            }
+        </style>
+    </head>
+    <body class="body">
+        <main>
+            <div class="cartao3D">
+                <div class="box_frente">
+                    <div class="box">
+                        <header>
+                            <img src="img/aviao.png" class="aviao" alt="aviao">
+                            <h1 class="nome">Leticia Lima</h1>
+                            <p class="profissao">Agente de Relações Internacionais</p>
+                        </header>
+                    </div>
+                    <div class="box2">
+                        <img src="img/eu.jpg" class="img" alt="Foto de Perfil">
+                        <img src="img/nuvens.png" class="nuvens" alt="nuvens">
+                        <aside>
+                            <a href="https://www.instagram.com/tixiadeassis" target="_blank"><img src="img/insta.png" class="insta" alt="Instagram"></a>
+                            <a href="https://github.com/LeticiaLima04" target="_blank"><img src="img/GitHub.png" class="git" alt="GitHub"></a>
+                        </aside>
+                    </div>
+                    <div class="box_costas">
+                        <footer>
+                            <h1 class="cont">Contato</h1>
+                            <p class="cont_p1">Leticia.lima09@aluno.ifce.edu.br</p>
+                            <p class="cont_p2">Telefone: (85) 98765-4321</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
