@@ -9,4 +9,4 @@ Este projeto utiliza HTML e CSS para criar um cartão interativo e responsivo co
 
 Ideal para personalização e aprendizado de conceitos de animação, responsividade e design visual. 🌐✨  
 
-👉 **Confira a página ao vivo [aqui]((https://leticialima04.github.io/CartaoCSS/))**!
+👉 **Confira o cartão ao vivo [aqui](https://leticialima04.github.io/CartaoCSS/)**!
